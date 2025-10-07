@@ -7,33 +7,34 @@
 
 /* Day/Night Mode */
 .night-mode {
-    background-color: #171717; 
+    background-color: #171717;
     color: #eee;
 }
 
 .night-mode .bg-white {
-    background-color: #2c2c2c ; 
+    background-color: #2c2c2c;
     box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.1), 0 1px 2px 0 rgba(255, 255, 255, 0.06);
 }
 
 .night-mode .text-gray-800 {
-    color: #d1d5db; 
+    color: #d1d5db;
 }
 
 .night-mode .text-gray-600 {
-    color: #a1a1aa; 
+    color: #a1a1aa;
 }
 
 .night-mode .bg-stone-100 {
-    background-color: #171717 ; 
+    background-color: #171717;
 }
 
 .night-mode .gradient span {
     color: #eee;
 }
+
 .night-mode .text-zinc-900 {
     color: #eee;
-    
+
 }
 
 .night-mode .download-btn {
@@ -41,51 +42,124 @@
 }
 
 .night-mode .skill-item {
-    background-color: #353535; 
-    box-shadow: none; 
-}
-.night-mode .skill-title,
-.night-mode .skill-percentage {
-    color: #eee; 
-}
-.night-mode .skill-icon-bg {
-    background-color: #870000; 
-    color: #fca5a5; 
+    background-color: #353535;
+    box-shadow: none;
 }
 
+.night-mode .skill-title,
+.night-mode .skill-percentage {
+    color: #eee;
+}
+
+.night-mode .skill-icon-bg {
+    background-color: #870000;
+    color: #fca5a5;
+}
+
+.night-mode .cert-block {
+    background-color: #1f2937;
+    box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.1), 0 10px 10px -5px rgba(255, 255, 255, 0.04);
+    border-color: #b91c1c;
+}
+
+.night-mode .cert-title-color {
+    color: #eee;
+}
+
+.night-mode .cert-subtitle-color {
+    color: #9ca3af;
+}
+
+.night-mode .cert-details-color {
+    color: #d1d5db;
+}
+
+
+.night-mode #projects {
+    background: #171717;
+}
+
+.night-mode .project-card {
+    background: #2c2c2c;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.night-mode .project-card h3 {
+    color: #eee;
+}
+
+.night-mode .project-card p {
+    color: #a1a1aa;
+}
+
+.night-mode .project-tag {
+    color: #afafaf;
+}
+
+.night-mode .project-card:hover .project-tag {
+    color: white;
+}
+
+.night-mode #contact {
+    background: #171717;
+}
+
+.night-mode .form-group input,
+.night-mode .form-group textarea {
+    background: #1f1f1f;
+    border-color: #404040;
+    color: #eee;
+}
+
+
+.night-mode .form-group label {
+    background: #2c2c2c;
+    color: #a1a1aa;
+}
+
+.night-mode footer {
+    background-color: #171717;
+    border-top: 1px solid #262626;
+}
+
+
+
+.night-mode footer .bg-gray-800 {
+    background: #2a2a2a;
+}
+
+.night-mode footer .bg-gray-800 {
+    background: #0f0f0f;
+}
+
+.night-mode footer .text-gray-400 {
+    color: #a1a1aa;
+}
+
+.night-mode footer .text-gray-400:hover {
+    color: #dc2626;
+}
+
+/* ================================ */
 
 /* home section */
 .font-hero {
     font-family: 'Poppins', sans-serif;
-    font-weight: 900;
+    font-weight: 800;
+    
 }
 
 .hero-bg {
-    background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop');
-    background-size: cover;
+    background-image: url('../src/assets/hero3.png');
+    background-size: contain;
     background-position: center;
     background-attachment: fixed;
 }
 
-/* about section */
-.about-img {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
-}
+/* ----------------about section--------------- */
 
-.about-heading {
-    letter-spacing: 7px;
-    opacity: 0;
-    transform: scaleY(3.8);
-    background: rgb(240, 0, 0);
-}
-
-.about-paragraph {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
-}
 
 .about-content:hover .about-img,
 .about-content .about-heading,
@@ -94,11 +168,128 @@
     transform: translateY(0) translateY(0);
 }
 
+
+
+/* Staggered fade-in animation */
+.project-card {
+    animation: fadeInUp1 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+
+@keyframes fadeInUp1 {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.project-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(220, 38, 38, 0.3);
+}
+
+/* ---------------contact section-------------- */
+.input-border-animation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #dc2626, #991b1b);
+    transition: width 0.4s ease;
+}
+
+.form-group:focus-within .input-border-animation {
+    width: 100%;
+}
+
+/* ------------ Footer section----------- */
+.footer-contact-btn {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.footer-contact-btn {
+    animation-delay: 0.2s;
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ------------ For all heading animations --------------- */
+.heading-alphabet{
+    animation: firstLetterBounce 2s infinite;
+    display: inline-block;
+
+}
+
+@keyframes firstLetterBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    
+}
+
+h2{
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* media queries */
+@media (min-width: 1024px) {
+    .about-img {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+    }
+
+    .about-paragraph {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+    }
+
+}
+
+
 @media (max-width: 768px) {
     .hh-headings-wrapper h2 {
         font-size: 3.8rem;
-        line-height: 0.8;   
+        line-height: 0.8;
     }
 
     .hero-bg {
@@ -119,6 +310,7 @@
         flex-direction: column;
         align-items: center;
     }
+
     .about-content {
         flex-direction: column;
     }
@@ -138,18 +330,19 @@
 
 @media (max-width: 480px) {
     .hh-headings-wrapper h2 {
-        font-size: 2.6rem;
+        font-size: 2.8rem;
         line-height: 32px;
     }
 
     .hero-bg {
-        height: 120px;
+        height: 130px;
     }
 
     .profile-image {
-        width: 150px;
-        height: 150px;
+        width: 160px;
+        height: 160px;
     }
+
     .about-image img {
         max-width: 300px;
         height: 300px;
@@ -159,12 +352,4 @@
         font-size: 2.5rem;
     }
 }
-
-
-
-
-
-
-
-
 
