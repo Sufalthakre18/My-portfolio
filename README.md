@@ -1,5 +1,5 @@
 ﻿# Personal Portfolio Website
-- ![url](https://my-portfolio-pearl-xi-96.vercel.app/)
+- [url](https://my-portfolio-pearl-xi-96.vercel.app/)
 - ![Portfolio Demo](src/assets/previewOfWeb.gif)
 
 
@@ -114,5 +114,6 @@ CSS Framework: Tailwind CSS
 
 
 🎨 **Consistent Design**: Unified color scheme and typography throughout the portfolio
+
 
 
